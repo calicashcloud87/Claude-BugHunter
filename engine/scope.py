@@ -62,7 +62,7 @@ class Scope:
     @classmethod
     def load(cls, path):
         import json
-        d = json.load(open(path, encoding="utf-8"))
+        d = json.load(open(path))
         return cls(d.get("in_scope", []), d.get("out_of_scope", []),
                    d.get("seeds", []), d.get("name", "engagement"))
 
